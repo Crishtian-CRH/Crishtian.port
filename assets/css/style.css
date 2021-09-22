@@ -1,0 +1,871 @@
+/*
+font-family: 'Gabriela', serif;
+*/
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Gabriela', serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition:all .3s cubic-bezier(.16,.8,.62,1.52);
+    text-transform: capitalize;
+}
+:root{
+    --with:#ffff;
+    --green:#16a085;
+    --black:#444;
+    --gris:#f3f3f3;
+    --light-color:#777;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border:.2rem solid var(--green);
+}
+.menu{
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    background: var(--with);
+    color: var(--green);
+    opacity: 1;
+    justify-content: space-between;
+    position: fixed;
+    padding: 20px;
+    box-shadow:0 0 10px var(--color-secund);
+    
+}
+.menu .logo{
+    font-family:'Gabriela', serif ;
+    font-size: 30px;
+}
+.menu .logo .span__logo{
+     color: var(--black);
+}
+.menu .main__menu{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+.menu .main__menu li a{
+    color: var(--green);
+    font-size: 24px;
+    font-family: 'Gabriela', serif;
+    padding: 15px;
+    text-decoration: none;
+    position: relative;
+    list-style: none;
+}
+.menu .main__menu li a::before{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--green);
+    bottom: 13px;
+    transition: all .3s ease-in-out;
+    left: 0;
+}
+.menu .main__menu li a:hover:before{
+    color: var(--black);
+    width: 100%;
+}
+.menu .open__menu{
+    font-size: 36px;
+    display: none;
+    cursor: pointer;
+    color: var(--green);
+}
+.menu .main__menu .close__menu{
+    font-size: 36px;
+    display: none;
+    cursor: pointer;
+    color: var(--green);
+    
+}
+.menu .main__menu .icons a i{
+    display: none;
+    color: var(--green);
+    font-size: 36px;
+    cursor: pointer;
+    padding: 6px;
+    transition: all .8s ease-in-out;
+}
+.menu .main__menu .icons a i:hover{
+    transform: rotate(360deg);
+    color: var(--color-text);
+}
+.menu .main__menu li a:hover{
+    color: var(--black);
+}
+/*header*/
+.container{
+    min-width: 100%;
+    padding:13% 50px;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    background: var(--color-text);
+    justify-content: space-between;
+}
+.cont1{
+    padding: 8% 0px;
+}
+.container .title{
+    color: var(--color-secund);
+    font-size: 36px;
+    font-weight: 900;
+    text-shadow: var(--text-shadow);
+}
+.container .title span{
+    color: var(--green);
+    text-shadow: var(--text-shadow);
+}
+.cont1 .sub-title{
+    color: var(--green);
+    font-size: 30px;
+    font-family: 'Gabriela', serif;
+    padding: 10px 0;
+}
+.cont1 .typing{
+    color: var(--green);
+    font-size: 30px;
+    font-family: 'Gabriela', serif;
+    font-weight: 900;
+    z-index: 0;
+}
+.text{
+    color: var(--color-secund);
+    font-family: 'Gabriela', serif;
+    font-size: 22px;
+}
+.container .img{
+    max-width: 400px;
+    max-height: 400px;
+}
+.container .img img{
+    width: 100%;
+    height: 100%;
+    animation-name: imgHeader;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes imgHeader{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--color-text);
+    color: var(--color-secund);
+    border-radius: 25px;
+    border: 2px solid var(--green);
+    position: relative;
+    transition:  .3s linear;
+    font-size: 24px;
+    font-family: 'Gabriela', serif;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--green);
+    color: var(--color-text);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    transition:.3s linear;
+}
+
+.btn:hover::before{
+    color: var(--color-text);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*acerca de mi*/
+
+.conts{
+    min-width: 100%;
+    min-height: 100vh;
+    background: var(--gris);
+    text-align: center;
+}
+.conts .title{
+    padding: 10px 0;
+    font-size: 36px;
+    text-shadow: var(--text-shadow);
+    font-family: 'Gabriela', serif;
+}
+.conts .Abaut{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 50px;
+    justify-content: space-between;
+}
+.Abaut .img{
+    max-width: 350px;
+    max-height: 400px;
+}
+.Abaut .img img{
+    width: 100%;
+    height: 100%;
+    animation-name: image;
+    border-radius: 12px;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes image{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+.cont-text{
+    text-align: center;
+}
+.cont-text h3{
+    padding: 10px ;
+    font-size: 30px;
+    color: var(--green);
+    font-family: 'Gabriela', serif;
+}
+.cont-text p{
+    text-align: justify;
+    font-size: 24px;
+    font-family: 'Gabriela', serif;
+}
+
+
+
+
+
+.btn1{
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--lite-color2);
+    color: var(--color-secund);
+    border-radius: 25px;
+    border: 2px solid var(--green);
+    position: relative;
+    transition:  .3s linear;
+    font-size: 24px;
+    font-family: 'Gabriela', serif;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.btn1::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--green);
+    color: var(--color-text);
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 0 0, 0% 100%);
+    transition:.3s linear;
+}
+
+.btn1:hover::before{
+    color: var(--color-text);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*Habilidad*/
+
+.inner{
+    min-width: 100%;
+    min-height: 100vh;
+    background: var(--color-text);
+}
+.inner .title{
+    color: var(--color-secund);
+    text-shadow: var(--text-shadow);
+    font-family: 'Gabriela', serif;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 0;
+}
+.habilidad{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px 50px;
+    margin: 20px 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.skill-box{
+    background: none;
+    max-width: 200px;
+    max-height: 400px;
+    border-radius: 25px;
+    border: solid var(--green) 2px;
+    transition: all .8s ease-in-out;
+    box-shadow: var(--box-shadow);
+}
+.skill-box:hover{
+    transform: translateX(10px);
+}
+.skill-title{
+    padding-top: 10px;
+}
+.skill-title h3{
+
+    color: var(--color-text);
+    font-family: 'Gabriela', serif;
+    font-size: 20px;
+}
+.skill-box .skill-title img{
+    animation-name: imagen;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes imagen{
+    from{
+        transform: scale(1.0);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+.skill-box p{
+    color: var(--light-color);
+    font-style:'Gabriela', serif;
+    transition: all .8s ease-in-out;
+}
+.skill-box:hover p{
+    color: var(--light-color);
+}
+
+/*Portfolio*/
+.portfolio{
+    min-width: 100%;
+    min-height: 100vh;
+    background: var(--lite-color2);
+}
+.cont{
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+}
+.tituloPortafolio{
+    color: var(--color-secund);
+    font-family: 'Gabriela', serif;
+    font-size: 36px;
+    padding: 10px 0px;
+    text-align: center;
+    text-shadow: var(--text-shadow);
+}
+.cont .main-card{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200%;
+    transition: all 1s ease-in-out;
+    
+}
+#two:checked ~ .main-card{
+    margin-left: -100%;
+}
+.cont .main-card .cards{
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 50px;
+    justify-content: space-between;
+}
+.main-card .cards .card{
+    width: calc(100% / 3.3);
+    background: none;
+    border-radius: 12px;
+    border: var(--green) solid 2px;
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    transition: all 0.4s ease;
+    animation-name: portfolio;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes portfolio{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-10px);
+    }
+}
+
+.main-card .cards .card:hover{
+    background: none;
+    transform: translateX(10px);
+}
+.cards .card .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  .cards .card .content .img{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 3px;
+    background: var(--color-title);
+    margin-bottom: 14px;
+    transition: all .4s ease-in-out;
+}
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    border: 3px solid var(--green);
+    border-radius: 50%;
+    object-fit: cover;
+}
+.card:hover .content .img img{
+   border: 3px solid var(--green);
+}
+.card:hover .content .img{
+    transform:scale(.9);
+}
+.card .content .name{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--green);
+    font-family: 'Gabriela', serif;
+}
+.card:hover .content .name{
+    color: var(--green);
+}
+.details p{
+    color: var(--green);
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    font-family: 'Gabriela', serif;
+    text-align: justify;
+    font-size: 18px;
+}
+.card:hover .details p{
+    opacity: 1;
+    transform: translateY(10px);
+    color: var(--light-color);
+}
+.cont .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.button label{
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background:none;
+    border: 2px solid var(--green);
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.button label.active{
+    width: 35px;
+    background: var(--green);
+}
+#one:checked ~ .button .one{
+    width: 35px;
+}
+#one:checked ~ .button .two{
+    width: 15px;
+}
+#two:checked ~ .button .one{
+    width: 15px;
+}
+#two:checked ~ .button .two{
+    width: 35px;
+}
+input[type="radio"]{
+    display: none;
+}
+
+/*Servicios*/
+
+.contenedorServ{
+    min-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.tituloServ{
+    text-align: center;
+    color: var(--green);
+    font-size: 36px;
+    font-family: 'Gabriela', serif;
+    text-shadow: var(--text-shadow);
+}
+.servBox{
+    margin: 130px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.cardserv{
+    position: relative;
+    max-width: 380px;
+    min-height: 350px;
+    background: none;
+    border: var(--green) solid 2px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .8s ease-in-out;
+    animation-name: cardanimation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+ @keyframes cardanimation{
+    from{
+      transform: translateY(0px);
+    }
+    to{
+      transform: translateY(10px);
+    }
+ }
+.cardserv .imgserv{
+    max-width: 150px;
+    max-height: 120px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:0px 30%;
+}
+.cardserv .imgserv img{
+    width: 100%;
+    height: 100%;
+}
+.cardserv h3{
+    padding: 10px 0;
+    color: var(--green);
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Gabriela', serif;
+    transition: all .8s ease-in-out;
+}
+.cardserv p{
+    font-family: 'Gabriela', serif;
+    text-align:justify;
+    padding: 0px 10px;
+    font-size: 20px;
+    color: var(--light-color);
+    transition: all .8s ease-in-out;
+}
+.cardserv .contredes .icon a i{
+    color: var(--green);
+    font-size: 30px;
+    padding: 8px 3px;
+    transition: all .8s ease-in-out;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    animation-name: iconos;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes iconos{
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1.05);
+    }
+}
+.cardserv .contredes .icon a i:hover{
+    color: var(--with);
+    background: var(--green);
+}
+
+
+
+
+
+.contacto{
+    min-width: 100%;
+    min-height: 100vh;
+    background: var(--gris);
+}
+.contacto .title{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--green);
+    font-family: 'Gabriela', serif;
+    font-size: 36px;
+    text-shadow: var(--text-shadow);
+}
+.subcontacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    margin: 0 50px;
+    padding: 20px 0;
+}
+.contenedor__contacto{
+    text-align: center;
+}
+
+.contenedor__contacto h3{
+    color: var(--green);
+    font-family: 'Gabriela', serif;
+    font-size: 20px;
+}
+.contenedor__contacto p{
+    color: var(--light-color);
+    font-size: 16px;
+    font-family: 'Gabriela', serif;
+    padding: 10px 0;
+}
+.contenedor__contacto p span{
+    color: var(--green);
+}
+.contenedor__contacto .info .col{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenedor__contacto .info .col a i{
+    color: var(--green);
+    padding: 10px 5px;
+    font-size: 24px;
+    transition: all .8s ease-in-out;
+}
+.redes1 a i{
+    color: var(--green);
+    font-size: 36px;
+    padding: 50px 10px;
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes animate{
+    from{
+        transform: scale(1) ;
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.form{
+    display: block;
+}
+.form h3{
+    text-align: center;
+    color: var(--green);
+}
+.subcontacto .form form input, .subcontacto .form form textarea{
+    width: 100%;
+   height: 100%;
+   color: var(--black);
+   font-family: 'Gabriela', serif;
+   font-size: 22px;
+   background: transparent;
+   outline: none;
+   letter-spacing: .5px;
+   border: var(--green) 2px solid;
+   border-radius: 12px;
+   margin: 10px 0px;
+   padding: 10px;
+   transition: all .5s ease-in-out;
+}
+::placeholder{
+    color: var(--light-color);
+    background: transparent;
+
+}
+.subcontacto .form form textarea{
+    max-height: 150px;
+    resize: none;
+    overflow: hidden;
+}
+.subcontenido .form form input:hover{
+    background: none;
+}
+/*copyright*/
+footer{
+    min-width: 100%;
+    min-height: 10vh;
+    text-align: center;
+    color: var(--green);
+    background: var(--with);
+}
+footer span{
+    text-align: center;
+    font-family: 'Gabriela', serif;
+    margin-top: 25px;
+    font-size: 24px;
+}
+footer span a{
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 800px){
+    .menu{
+        z-index: 2000;
+    }
+    .menu .main__menu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: rgb(24, 23, 23);
+        transition: top 2s ease;
+        display: none;
+    }
+    .menu .main__menu .close__menu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .menu .open__menu{
+        display: block;
+    }
+
+    .menu .main__menu li a:hover{
+        background: none;
+        color: var(--color-text);
+    }
+    .menu .main__menu .icons a i{
+        display: inline-block;
+        padding: 12px;
+    }
+
+
+
+
+    .container{
+        gap: 20px;
+        padding:25% 50px;
+    }
+
+
+
+
+    .conts .Abaut{
+        gap: 10px;
+    }
+
+
+
+
+    .main-card .cards .card{
+        margin: 20px 0 10px 0;
+        width: calc(100% / 2 - 10px);
+      }
+
+
+
+      .subcontacto{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-between;
+        margin: 0 50px;
+        padding: 20px 0;
+    }
+     /*copyright*/
+     footer{
+        display: block;
+        padding-bottom: 25px;
+    }
+    footer span{
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 600px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .main-card .cards .card{
+      /* margin: 20px 0 10px 0; */
+      width: 100%;
+    }
+  }
